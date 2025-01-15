@@ -3,185 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Clone</title>
+    <title>Serviço de Streaming</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #141414;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .header {
+            background-color: #ff0080;
             color: white;
+            text-align: center;
+            padding: 20px 0;
         }
-
-        /* Barra de navegação */
-        .navbar {
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .plans {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #141414;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar img {
-            height: 50px;
-        }
-
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .navbar ul li {
-            display: inline;
-        }
-
-        .navbar ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .navbar ul li a:hover {
-            color: #e50914;
-        }
-
-        /* Banner principal */
-        .banner {
-            position: relative;
-            height: 70vh;
-            background-image: url('https://source.unsplash.com/1600x900/?movie');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             justify-content: center;
+            gap: 20px;
+            margin: 30px auto;
             padding: 20px;
+            max-width: 1200px;
         }
-
-        .banner h1 {
-            font-size: 3rem;
+        .plan {
+            background-color: white;
+            border: 2px solid #ff0080;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
-        .banner p {
-            font-size: 1.2rem;
-            max-width: 600px;
+        .plan h2 {
+            background-color: #ff0080;
+            color: white;
+            margin: -20px -20px 10px -20px;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 10px 10px 0 0;
         }
-
-        .banner .buttons {
+        .plan p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .plan .price {
+            font-size: 24px;
+            color: #00cc66;
+            font-weight: bold;
+        }
+        .buttons {
             margin-top: 20px;
         }
-
-        .banner .buttons a {
+        .buttons a {
             text-decoration: none;
+            background-color: #00cc66;
             color: white;
-            background-color: #e50914;
+            padding: 10px 20px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .buttons a:hover {
+            background-color: #00994d;
+        }
+        .whatsapp-button {
+            margin-top: 15px;
+        }
+        .whatsapp-button a {
+            text-decoration: none;
+            background-color: #25d366;
+            color: white;
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
-            margin-right: 10px;
+            display: inline-block;
             transition: background-color 0.3s;
         }
-
-        .banner .buttons a:hover {
-            background-color: #b00710;
-        }
-
-        /* Seções de categorias */
-        .category {
-            margin: 20px 0;
-            padding: 0 20px;
-        }
-
-        .category h2 {
-            margin-bottom: 10px;
-        }
-
-        .category .row {
-            display: flex;
-            overflow-x: auto;
-            gap: 10px;
-        }
-
-        .category .row img {
-            height: 150px;
-            border-radius: 5px;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-
-        .category .row img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Estilo para scrollbar */
-        .category .row {
-            scrollbar-width: thin;
-            scrollbar-color: #e50914 transparent;
-        }
-
-        .category .row::-webkit-scrollbar {
-            height: 6px;
-        }
-
-        .category .row::-webkit-scrollbar-thumb {
-            background-color: #e50914;
-            border-radius: 10px;
-        }
-
-        .category .row::-webkit-scrollbar-track {
-            background-color: transparent;
+        .whatsapp-button a:hover {
+            background-color: #1da851;
         }
     </style>
 </head>
 <body>
-    <!-- Barra de navegação -->
-    <div class="navbar">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Séries</a></li>
-            <li><a href="#">Filmes</a></li>
-            <li><a href="#">Minha Lista</a></li>
-        </ul>
+    <!-- Cabeçalho -->
+    <div class="header">
+        <h1>Escolha o melhor plano de streaming para você</h1>
     </div>
 
-    <!-- Banner principal -->
-    <div class="banner">
-        <h1>Descubra o melhor do entretenimento</h1>
-        <p>Assista a filmes e séries exclusivos agora mesmo. Sem comerciais. Cancele a qualquer momento.</p>
-        <div class="buttons">
-            <a href="#">Assista Agora</a>
-            <a href="#">Saiba Mais</a>
+    <!-- Planos -->
+    <div class="plans">
+        <div class="plan">
+            <h2>Mensal</h2>
+            <p>30 dias de acesso</p>
+            <p class="price">R$ 29,90</p>
+            <div class="buttons">
+                <a href="#">Assinar Agora</a>
+            </div>
+            <div class="whatsapp-button">
+                <a href="https://wa.me/5511999999999" target="_blank">Fale no WhatsApp</a>
+            </div>
         </div>
-    </div>
-
-    <!-- Seção de categorias -->
-    <div class="category">
-        <h2>Populares na Netflix</h2>
-        <div class="row">
-            <img src="https://source.unsplash.com/200x300/?action" alt="Filme 1">
-            <img src="https://source.unsplash.com/200x300/?drama" alt="Filme 2">
-            <img src="https://source.unsplash.com/200x300/?comedy" alt="Filme 3">
-            <img src="https://source.unsplash.com/200x300/?thriller" alt="Filme 4">
-            <img src="https://source.unsplash.com/200x300/?romance" alt="Filme 5">
+        <div class="plan">
+            <h2>Trimestral</h2>
+            <p>3 meses de acesso</p>
+            <p class="price">R$ 75,00</p>
+            <div class="buttons">
+                <a href="#">Assinar Agora</a>
+            </div>
+            <div class="whatsapp-button">
+                <a href="https://wa.me/5511999999999" target="_blank">Fale no WhatsApp</a>
+            </div>
         </div>
-    </div>
-
-    <div class="category">
-        <h2>Recomendados para Você</h2>
-        <div class="row">
-            <img src="https://source.unsplash.com/200x300/?animation" alt="Filme 1">
-            <img src="https://source.unsplash.com/200x300/?sci-fi" alt="Filme 2">
-            <img src="https://source.unsplash.com/200x300/?fantasy" alt="Filme 3">
-            <img src="https://source.unsplash.com/200x300/?mystery" alt="Filme 4">
-            <img src="https://source.unsplash.com/200x300/?horror" alt="Filme 5">
+        <div class="plan">
+            <h2>Anual</h2>
+            <p>12 meses de acesso</p>
+            <p class="price">R$ 180,00</p>
+            <div class="buttons">
+                <a href="#">Assinar Agora</a>
+            </div>
+            <div class="whatsapp-button">
+                <a href="https://wa.me/5511999999999" target="_blank">Fale no WhatsApp</a>
+            </div>
         </div>
     </div>
 </body>
 </html>
-
