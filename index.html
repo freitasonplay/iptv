@@ -8,21 +8,56 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #000;
-            color: white;
+            background-color: #f0f0f0;
+            color: #333;
         }
         .header {
-            background-image: url('https://via.placeholder.com/1500x600'); /* Substitua pelo link da imagem do Homem-Aranha */
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-            padding: 200px 20px;
+            background-color: #ff0080;
             color: white;
+            text-align: center;
+            padding: 20px 0;
         }
         .header h1 {
-            font-size: 48px;
+            font-size: 24px;
             margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .banner {
+            position: relative;
+            background: url('https://via.placeholder.com/1920x500?text=Homem-Aranha') no-repeat center center/cover;
+            color: white;
+            text-align: left;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+        }
+        .banner-content {
+            max-width: 600px;
+        }
+        .banner h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .banner p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .banner-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        .banner-buttons a {
+            text-decoration: none;
+            background-color: #ff0080;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .banner-buttons a:hover {
+            background-color: #cc0066;
         }
         .plans {
             display: flex;
@@ -34,7 +69,7 @@
             max-width: 1200px;
         }
         .plan {
-            background-color: #1c1c1c;
+            background-color: white;
             border: 2px solid #ff0080;
             border-radius: 10px;
             padding: 20px;
@@ -95,9 +130,16 @@
     </style>
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <div class="header">
-        <h1>Assista ao melhor do streaming com Homem-Aranha e muito mais!</h1>
+    <!-- Banner -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>A melhor lista IPTV com teste grátis do Brasil</h2>
+            <p>Assista a todos os seus canais de TV e streaming preferidos com qualidade e estabilidade.</p>
+            <div class="banner-buttons">
+                <a href="#">Assinar</a>
+                <a href="#">Teste Grátis</a>
+            </div>
+        </div>
     </div>
 
     <!-- Planos -->
