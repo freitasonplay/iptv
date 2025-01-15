@@ -1,184 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviço de Streaming</title>
+    <title>FreitasonPlay</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #000000;
-            color: #333;
-        }
-        .header {
-            background-color: #ff0080;
+            background-color: #141414;
             color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .header h1 {
-            font-size: 24px;
             margin: 0;
         }
-.banner {
-    background: #f4f4f4; /* Altere conforme o design desejado */
-    padding: 20px;
-    display: flex;
-    justify-content: flex-start; /* Mantém o conteúdo alinhado à esquerda */
-    align-items: center; /* Alinha verticalmente */
-    height: 300px; /* Altura do banner */
-}
 
-.banner-content {
-    max-width: 600px; /* Limita a largura do conteúdo */
-    text-align: left; /* Alinha o texto à esquerda */
-}
-
-.banner h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.banner p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.banner-buttons a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-right: 10px;
-    text-decoration: none;
-    background: #007BFF; /* Cor do botão */
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.banner-buttons a:hover {
-    background: #0056b3;
-}
-
-        .plans {
+        .banner {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin: 30px auto;
+            align-items: center;
+            justify-content: space-between;
+            background-image: url('https://i.imgur.com/VUplW4x.jpg'); /* Substitua pela imagem do Homem-Aranha */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
             padding: 20px;
-            max-width: 1200px;
         }
-        .plan {
-            background-color: white;
-            border: 2px solid #ff0080;
+
+        .banner-content {
+            max-width: 500px;
+        }
+
+        .banner-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .banner-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .banner-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .banner-buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: #e50914;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .banner-buttons a:hover {
+            background-color: #b20710;
+        }
+
+        .banner img {
+            max-height: 80%;
             border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            width: 280px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .plan h2 {
-            background-color: #ff0080;
-            color: white;
-            margin: -20px -20px 10px -20px;
-            padding: 10px;
-            font-size: 20px;
-            border-radius: 10px 10px 0 0;
-        }
-        .plan p {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-        .plan .price {
-            font-size: 24px;
-            color: #00cc66;
-            font-weight: bold;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        .buttons a {
-            text-decoration: none;
-            background-color: #00cc66;
-            color: white;
-            padding: 10px 20px;
-            margin: 5px;
-            display: inline-block;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .buttons a:hover {
-            background-color: #00994d;
-        }
-        .whatsapp-button {
-            margin-top: 15px;
-        }
-        .whatsapp-button a {
-            text-decoration: none;
-            background-color: #25d366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            display: inline-block;
-            transition: background-color 0.3s;
-        }
-        .whatsapp-button a:hover {
-            background-color: #1da851;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
-    <!-- Banner -->
-<div class="banner">
-    <div class="banner-content">
-        <h2>A melhor lista IPTV com teste grátis do Brasil</h2>
-        <p>Assista a todos os seus canais de TV e streaming preferidos com qualidade e estabilidade.</p>
-        <div class="banner-buttons">
-            <a href="#">Assinar</a>
-            <a href="#">Teste Grátis</a>
-        </div>
-    </div>
-</div>
-
-
-    <!-- Planos -->
-    <div class="plans">
-        <div class="plan">
-            <h2>Mensal</h2>
-            <p>30 dias de acesso</p>
-            <p class="price">R$ 29,90</p>
-            <div class="buttons">
+    <div class="banner">
+        <div class="banner-content">
+            <h2>A melhor lista IPTV com teste grátis do Brasil</h2>
+            <p>Assista a todos os seus canais de TV e streaming preferidos com qualidade e estabilidade.</p>
+            <div class="banner-buttons">
                 <a href="#">Assinar Agora</a>
-            </div>
-            <div class="whatsapp-button">
-                <a href="https://wa.me/5511999999999" target="_blank">Fale no WhatsApp</a>
+                <a href="#">Teste Grátis</a>
             </div>
         </div>
-        <div class="plan">
-            <h2>Trimestral</h2>
-            <p>3 meses de acesso</p>
-            <p class="price">R$ 75,00</p>
-            <div class="buttons">
-                <a href="#">Assinar Agora</a>
-            </div>
-            <div class="whatsapp-button">
-                <a href="https://wa.me/5511999999999" target="_blank">Fale no WhatsApp</a>
-            </div>
-        </div>
-        <div class="plan">
-            <h2>Anual</h2>
-            <p>12 meses de acesso</p>
-            <p class="price">R$ 180,00</p>
-            <div class="buttons">
-                <a href="#">Assinar Agora</a>
-            </div>
-            <div class="whatsapp-button">
-                <a href="https://wa.me/5511999999999" target="_blank">Fale no WhatsApp</a>
-            </div>
-        </div>
+        <img src="https://i.imgur.com/VUplW4x.jpg" alt="Homem-Aranha">
     </div>
 </body>
 </html>
