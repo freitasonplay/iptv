@@ -130,7 +130,8 @@
             background-color: #b20710;
         }
 
-        .plans {
+/* Estilos gerais */
+.plans {
     background-color: #222;
     color: white;
     text-align: center;
@@ -142,15 +143,27 @@
     margin-bottom: 15px;
 }
 
+/* Estilo dos planos */
 .plan {
+    display: block; /* Torna o elemento clicável */
     margin: 10px auto;
     padding: 20px;
     max-width: 300px;
     background-color: #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Remove sublinhado */
+    color: white; /* Garante que o texto fique branco */
 }
 
+/* Efeito ao passar o mouse */
+.plan:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    transform: translateY(-5px);
+}
+
+/* Estilo do texto do plano */
 .plan h4 {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -161,17 +174,17 @@
     margin-bottom: 5px;
 }
 
-/* Estilo para os links */
+/* Estilo para links internos */
 .plan a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-/* Sobrecor verde ao passar o mouse */
-.plan a:hover {
+.plan:hover a {
     color: green;
 }
+
 
     </style>
 </head>
@@ -218,21 +231,21 @@
     </div>
 
     <div class="plans">
-    <h3>Nossos Planos</h3>
-    <div class="plan">
-        <h4>Plano Básico</h4>
-        <p>30 dias de acesso</p>
-        <a href="https://w.app/GY3gWC">WHATSAPP</a>
-    </div>
-    <div class="plan">
-        <h4>Plano Premium</h4>
-        <p>60 dias de acesso</p>
-        <a href="https://w.app/GY3gWC">WHATSAPP</a>
-    </div>
-        <div class="plan">
-        <h4>Plano Diamante</h4>
-        <p>90 dias de acesso</p>
-        <a href="https://w.app/GY3gWC">WHATSAPP</a>
+    <h3>Planos</h3>
+    <a href="#plan1" class="plan">
+        <h4>Plano 1</h4>
+        <p>Descrição do Plano 1</p>
+    </a>
+    <a href="#plan2" class="plan">
+        <h4>Plano 2</h4>
+        <p>Descrição do Plano 2</p>
+    </a>
+    <a href="#plan3" class="plan">
+        <h4>Plano 3</h4>
+        <p>Descrição do Plano 3</p>
+    </a>
+</div>
+
         </div>
 </div>
 
