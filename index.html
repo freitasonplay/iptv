@@ -131,35 +131,48 @@
         }
 
         .plans {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
 
-        .plans h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
+.plans h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
 
-        .plan {
-            margin: 10px auto;
-            padding: 20px;
-            max-width: 300px;
-            background-color: #333;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
+.plan {
+    margin: 10px auto;
+    padding: 20px;
+    max-width: 300px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
 
-        .plan h4 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
+.plan h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
 
-        .plan p {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
+.plan p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* Estilo para os links */
+.plan a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Sobrecor verde ao passar o mouse */
+.plan a:hover {
+    color: green;
+}
+
     </style>
 </head>
 <body>
@@ -203,11 +216,19 @@
     </div>
 
     <div class="plans">
-        <h3>Nossos Planos</h3>
-        <div class="plan">
-            <h4>Mensal - 30 dias</h4>
-            <p>R$ 29,90</p>
-        </div>
+    <h3>Nossos Planos</h3>
+    <div class="plan">
+        <h4>Plano Básico</h4>
+        <p>Descrição do plano</p>
+        <a href="https://exemplo.com">Saiba mais</a>
+    </div>
+    <div class="plan">
+        <h4>Plano Premium</h4>
+        <p>Descrição do plano</p>
+        <a href="https://exemplo.com">Saiba mais</a>
+    </div>
+</div>
+
         <div class="plan">
             <h4>Trimestral</h4>
             <p>R$ 75,00</p>
